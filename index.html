@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appunto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Appunto</h1>
+        <p>Un posto dove scrivere senza distrazioni...</p>
+    </header>
+    <main>
+        <section>
+            <button class="js-aggiungi-btn">Aggiungi +</button>
+            <fieldset class="js-new-note-fieldset new-note-fieldset display--none">
+                <textarea class="js-new-note-textarea new-note-textarea"></textarea>
+                <p class="salva-btn-container"><button class="js-salva-btn">Salva</button></p>
+            </fieldset>
+        </section>
+        <section class="js-note-entries">
+        </section>
+        <!-- <test-el>
+            <p slot="greeting">Ciao a tutti!</p>
+            <span slot="button-text">Clicca</span>
+        </test-el> -->
+    </main>
+    <template class="js-note-entry-template">
+        <article class="js-note-entry note-entry">
+            <div class="js-note-entry-date note-entry-date"></div>
+            <div class="js-note-entry-content"></div>
+        </article>
+    </template>
+    <template class="js-test-el-template">
+        <slot name="greeting"><p>Hello there!</p></slot>
+        <button><slot name="button-text">Try</slot></button>
+    </template>
+    <script src="main.js"></script>
+</body>
+</html>
